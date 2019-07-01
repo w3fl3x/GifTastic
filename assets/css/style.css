@@ -2,6 +2,23 @@ body {
     background: url("../images/giftly.png")
 }
 
+.row {
+    padding: 8px;
+}
+
 h1 {
     text-align: center;
+}
+
+.search {
+    font-weight: bold;
+}
+
+.btn {
+    background: #0781be !important;
+    color: white !important;
+}
+
+.btn:hover {
+    background: #077bff !important;
 }
