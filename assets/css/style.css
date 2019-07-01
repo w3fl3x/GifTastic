@@ -15,16 +15,20 @@ p {
     color: #0781be;
 }
 
-.search {
+label {
     font-weight: bold;
 }
 
-.btn {
-    background: #0781be !important;
-    color: white !important;
+.button {
+    background-color: #0781be;
+    border: none;
+    color: white;
+    padding: 10px 15px;
     margin: 7px 7px 7px 0;
 }
 
-.btn:hover {
+.button4 {border-radius: 12px;}
+
+.button:hover {
     background: #077bff !important;
 }
