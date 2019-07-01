@@ -6,8 +6,13 @@ body {
     padding: 8px;
 }
 
-h1 {
+p {
     text-align: center;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 55px;
+    font-weight: bold;
+    letter-spacing: 6px;
+    color: #0781be;
 }
 
 .search {
@@ -17,6 +22,7 @@ h1 {
 .btn {
     background: #0781be !important;
     color: white !important;
+    margin: 7px 7px 7px 0;
 }
 
 .btn:hover {
