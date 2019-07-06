@@ -27,7 +27,9 @@ label {
     margin: 7px 7px 7px 0;
 }
 
-.button4 {border-radius: 12px;}
+.button4 {
+    border-radius: 12px;
+}
 
 .button:hover {
     background: #009ada;

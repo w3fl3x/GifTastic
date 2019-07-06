@@ -12,17 +12,17 @@ $(document).ready(function () {
     renderButtons();
     
     //Adding button for movie entered
-    $('#add-movie').on('click', function () {
+    $('#add-movie').on('click', function(event) {
         event.preventDefault();
         var movie = $('#movie-input').val().trim();
         movies.push(movie);
         form.reset();
         renderButtons();
-        return false;
+        return;
     });
 
     //Getting gifs from api and onto html
-    $('button').on('click', function () {
+    $('button').on('click', function() {
         var movie = $(this).attr('data-movie');
         var queryURL = 'https://api.giphy.com/v1/gifs/search?q=' + movie + '&api_key=NqboVSH8zAAnvT3rvSVfDCicRHLH4Y7g&limit=10&offset=0&lang=en'
 
