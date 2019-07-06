@@ -31,6 +31,11 @@ label {
 
 .button4 {
     border-radius: 12px;
+    background-color: #0781be;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    margin: 7px 7px 7px 0;
 }
 
 .button:hover {
