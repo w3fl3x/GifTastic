@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    // var movies = ['iron man', 'the incredible hulk', 'thor', 'captain america: the first avenger', 'the avengers', 'guardians of the galaxy', 'ant man', 'black panther', 'avengers endgame'];
     var movies = ['funny', 'poking', 'fail', 'cactus', 'pizza', 'ice cream', 'reaction', 'screaming'];
 
     //Add buttons for topics array
@@ -19,7 +18,7 @@ $(document).ready(function () {
         movies.push(movie);
         form.reset();
         renderButtons();
-        return;
+        return false;
     });
 
     //Getting gifs from api and onto html
