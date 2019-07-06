@@ -1,5 +1,7 @@
-body {
-    background: url("../images/giftly.png")
+html, body {
+    background: url("../images/giftly.png");
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .row {

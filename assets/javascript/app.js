@@ -15,14 +15,18 @@ $(document).ready(function () {
     $('#add-movie').on('click', function(event) {
         event.preventDefault();
         var movie = $('#movie-input').val().trim();
+        if (movie === ""){
+            alert("Please type something")
+            return;
+        }else {
         movies.push(movie);
         form.reset();
-        renderButtons();
+        renderButtons();}
         return;
     });
 
     //Getting gifs from api and onto html
-    $('button').on('click', function() {
+    $('.button').on('click', function() {
         var movie = $(this).attr('data-movie');
         var queryURL = 'https://api.giphy.com/v1/gifs/search?q=' + movie + '&api_key=NqboVSH8zAAnvT3rvSVfDCicRHLH4Y7g&limit=10&offset=0&lang=en'
 
@@ -32,7 +36,7 @@ $(document).ready(function () {
         }).then(function(response) {
             console.log(response);
             var results = response.data;
-            $('#movies').empty();
+            // $('#movies').empty();
             for (var i = 0; i < results.length; i++) {
                 var movieDiv = $('<div>');
                 var h6 = $('<h6>').text('Rating: ' + results[i].rating);
