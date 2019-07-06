@@ -1,6 +1,6 @@
 $(document).ready(function () {
     // var movies = ['iron man', 'the incredible hulk', 'thor', 'captain america: the first avenger', 'the avengers', 'guardians of the galaxy', 'ant man', 'black panther', 'avengers endgame'];
-    var movies = ['funny', 'reaction', 'poking', 'fail', 'cactus'];
+    var movies = ['funny', 'poking', 'fail', 'cactus', 'pizza', 'ice cream', 'reaction', 'screaming'];
 
     //Add buttons for topics array
     function renderButtons() {
@@ -19,7 +19,7 @@ $(document).ready(function () {
         movies.push(movie);
         form.reset();
         renderButtons();
-        return false;
+        return;
     });
 
     //Getting gifs from api and onto html
@@ -30,7 +30,8 @@ $(document).ready(function () {
         $.ajax({
             url: queryURL,
             method: 'GET'
-        }).done(function (response) {
+        }).then(function(response) {
+            console.log(response);
             var results = response.data;
             $('#movies').empty();
             for (var i = 0; i < results.length; i++) {
@@ -45,7 +46,7 @@ $(document).ready(function () {
                 movieImg.attr('class', 'gif');
                 movieDiv.append(h6);
                 movieDiv.append(movieImg);
-                $('#movies').append(movieDiv);
+                $('#movies').prepend(movieDiv);
             }
         });
     });
@@ -55,10 +56,10 @@ $(document).ready(function () {
         var animateImage = $(this).attr('data-animate');
         var stillImage = $(this).attr('data-still');
 
-        if (state === 'still') {
+        if (state == 'still') {
             $(this).attr('src', animateImage);
             $(this).attr('data-state', 'animate');
-        } else if (state === 'animate') {
+        } else if (state == 'animate') {
             $(this).attr('src', stillImage);
             $(this).attr('data-state', 'still');
         }
