@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    var movies = ['funny', 'poking', 'fail', 'cactus', 'pizza', 'ice cream', 'reaction', 'screaming', 'cake', 'happy', 'rain', 'disney', 'emoji'];
+    var movies = ['funny', 'poking', 'fail', 'cactus', 'pizza', 'ice cream', 'reaction', 'screaming', 'cake', 'happy', 'rain', 'disney', 'emoji', 'minion'];
 
     //Add buttons for topics array
     function renderButtons() {
@@ -35,7 +35,7 @@ $(document).ready(function() {
             method: 'GET'
         }).then(function(response) {
             var results = response.data;
-            console.log(response)
+            // console.log(response)
             for (var i = 0; i < results.length; i++) {
                 var movieDiv = $('<div>');
                 var title = $('<h6>').text('Title: ' + results[i].title);
