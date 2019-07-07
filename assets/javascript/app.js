@@ -35,8 +35,10 @@ $(document).ready(function() {
             method: 'GET'
         }).then(function(response) {
             var results = response.data;
+            console.log(response)
             for (var i = 0; i < results.length; i++) {
                 var movieDiv = $('<div>');
+                var title = $('<h6>').text('Title: ' + results[i].title);
                 var h6 = $('<h6>').text('Rating: ' + results[i].rating);
                 var movieImg = $('<img>');
                 
@@ -45,6 +47,7 @@ $(document).ready(function() {
                 movieImg.attr('data-animate', results[i].images.fixed_height.url);
                 movieImg.attr('data-state', 'still');
                 movieImg.attr('class', 'gif');
+                movieDiv.append(title);
                 movieDiv.append(h6);
                 movieDiv.append(movieImg);
                 $('#movies').prepend(movieDiv);
