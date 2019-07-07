@@ -39,7 +39,7 @@ $(document).ready(function() {
             for (var i = 0; i < results.length; i++) {
                 var movieDiv = $('<div>');
                 var title = $('<h6>').text('Title: ' + results[i].title);
-                var h6 = $('<h6>').text('Rating: ' + results[i].rating);
+                var rating = $('<h6>').text('Rating: ' + results[i].rating);
                 var movieImg = $('<img>');
                 
                 movieImg.attr('src', results[i].images.fixed_height_still.url);
@@ -48,7 +48,7 @@ $(document).ready(function() {
                 movieImg.attr('data-state', 'still');
                 movieImg.attr('class', 'gif');
                 movieDiv.append(title);
-                movieDiv.append(h6);
+                movieDiv.append(rating);
                 movieDiv.append(movieImg);
                 $('#movies').prepend(movieDiv);
             }

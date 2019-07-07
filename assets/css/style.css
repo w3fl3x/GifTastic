@@ -45,3 +45,7 @@ label {
 .button:hover {
     background: #009ada;
 }
+
+.gif {
+    margin-right: 15px;
+}
