@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
     var movies = ['funny', 'poking', 'fail', 'cactus', 'pizza', 'ice cream', 'reaction', 'screaming'];
 
     //Add buttons for topics array
@@ -16,7 +16,7 @@ $(document).ready(function () {
         event.preventDefault();
         var movie = $('#movie-input').val().trim();
         if (movie === ""){
-            alert("Please type something")
+            alert("Please type a topic.")
             return;
         }else {
         movies.push(movie);
@@ -26,7 +26,7 @@ $(document).ready(function () {
     });
 
     //Getting gifs from api and onto html
-    $('.button').on('click', function() {
+    $(document).on('click', '.button', function() {
         var movie = $(this).attr('data-movie');
         var queryURL = 'https://api.giphy.com/v1/gifs/search?q=' + movie + '&api_key=NqboVSH8zAAnvT3rvSVfDCicRHLH4Y7g&limit=10&offset=0&lang=en'
 
@@ -42,9 +42,9 @@ $(document).ready(function () {
                 var h6 = $('<h6>').text('Rating: ' + results[i].rating);
                 var movieImg = $('<img>');
                 
-                movieImg.attr('src', results[i].images.original_still.url);
-                movieImg.attr('data-still', results[i].images.original_still.url);
-                movieImg.attr('data-animate', results[i].images.original.url);
+                movieImg.attr('src', results[i].images.fixed_height_still.url);
+                movieImg.attr('data-still', results[i].images.fixed_height_still.url);
+                movieImg.attr('data-animate', results[i].images.fixed_height.url);
                 movieImg.attr('data-state', 'still');
                 movieImg.attr('class', 'gif');
                 movieDiv.append(h6);
