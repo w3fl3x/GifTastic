@@ -27,4 +27,4 @@ Click on any button to display gifs on the page.
 ## Screenshots
 
 ### Gif Display
-![homepage](assets/images/Screenshot1.png)
+![homepage](assets/images/Screenshot.png)
